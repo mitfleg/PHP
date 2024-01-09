@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Helper\\": "src/Helper/",
+            "Exception\\": "src/Exception/",
+            "Model\\": "src/Model/",
+            "Repository\\": "src/Repository/",
+            "Service\\": "src/Service/"
+        }
+    }
+}
