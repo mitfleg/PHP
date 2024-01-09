@@ -2,27 +2,33 @@
 
 namespace Exception;
 
-class BaseException extends \DomainException {
+class BaseException extends \DomainException
+{
 
-    /** var array */
     private $_data;
     private $description;
 
-    function __construct($message, string $description = '', array $data = [], \Throwable $previous = null) {
+    function __construct($message, int $code = 0, string $description = '', array $data = [], \Throwable $previous = null)
+    {
         $this->_data = $data;
         $this->description = $description;
-        parent::__construct($message, 0, $previous);
+        parent::__construct($message, $code, $previous);
     }
 
-    function getApiErrMessage() {
+    function getApiErrMessage()
+    {
         return [
-            'error_code' => $this->message,
-            'error_desc' => $this->description,
-            'error_data' => $this->_data
+            'result' => 'error',
+            'data' => [
+                'error_message' => $this->message,
+                'error_desc' => $this->description,
+                'error_data' => $this->_data
+            ]
         ];
     }
 
-    public function getData() {
+    public function getData()
+    {
         return $this->_data;
     }
 }

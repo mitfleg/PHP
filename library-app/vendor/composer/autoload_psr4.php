@@ -7,8 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Service\\' => array($baseDir . '/src/Service'),
+    'Router\\' => array($baseDir . '/src/Router'),
     'Repository\\' => array($baseDir . '/src/Repository'),
     'Model\\' => array($baseDir . '/src/Model'),
+    'Http\\' => array($baseDir . '/src/Http'),
     'Helper\\' => array($baseDir . '/src/Helper'),
     'Exception\\' => array($baseDir . '/src/Exception'),
+    'Controller\\' => array($baseDir . '/src/Controller'),
+    'Contracts\\' => array($baseDir . '/src/Contracts'),
 );

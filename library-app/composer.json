@@ -5,7 +5,11 @@
             "Exception\\": "src/Exception/",
             "Model\\": "src/Model/",
             "Repository\\": "src/Repository/",
-            "Service\\": "src/Service/"
+            "Service\\": "src/Service/",
+            "Router\\": "src/Router/",
+            "Controller\\": "src/Controller/",
+            "Http\\": "src/Http/",
+            "Contracts\\": "src/Contracts/"
         }
     }
 }

@@ -9,8 +9,10 @@ class BaseModel{
     protected static array $typeDefaults = [];
     protected array $properties = [];
     protected array $_old_values = [];
+    public ?int $id = null;
 
     public function __construct(array $data) {
+        $this->id = $data['id'] ?? null;
         $names = $this->properties();
 
         foreach($names as $name) {
@@ -83,5 +85,13 @@ class BaseModel{
         $this->properties = $properties;
 
         return $properties;
+    }
+
+    public static function getTable() {
+        return static::TABLE;
+    }
+
+    public function setId(int $id) : void {
+        $this->id = $id;
     }
 }

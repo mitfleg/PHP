@@ -13,6 +13,7 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         ),
         'R' => 
         array (
+            'Router\\' => 7,
             'Repository\\' => 11,
         ),
         'M' => 
@@ -21,11 +22,17 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         ),
         'H' => 
         array (
+            'Http\\' => 5,
             'Helper\\' => 7,
         ),
         'E' => 
         array (
             'Exception\\' => 10,
+        ),
+        'C' => 
+        array (
+            'Controller\\' => 11,
+            'Contracts\\' => 10,
         ),
     );
 
@@ -33,6 +40,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'Service\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Service',
+        ),
+        'Router\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Router',
         ),
         'Repository\\' => 
         array (
@@ -42,6 +53,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         array (
             0 => __DIR__ . '/../..' . '/src/Model',
         ),
+        'Http\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Http',
+        ),
         'Helper\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Helper',
@@ -49,6 +64,14 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'Exception\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Exception',
+        ),
+        'Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Controller',
+        ),
+        'Contracts\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Contracts',
         ),
     );
 

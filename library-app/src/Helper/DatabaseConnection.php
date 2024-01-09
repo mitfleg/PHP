@@ -1,11 +1,18 @@
 <?php
+
 namespace Helper;
 
 use PDO;
 
 class DatabaseConnection {
+    private $configPath;
+
+    public function __construct(string $configPath) {
+        $this->configPath = $configPath;
+    }
+
     public function connect() {
-        $config = require BASE_PATH.'/config/database.php';
+        $config = require $this->configPath;
 
         $dsn = "mysql:host={$config['host']};dbname={$config['db_name']};charset={$config['charset']}";
         try {
