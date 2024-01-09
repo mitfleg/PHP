@@ -4,36 +4,6 @@
 
 Library-App - это PHP-приложение для управления библиотекой. Включает в себя функционал для работы с книгами, авторами, читателями и процессом выдачи книг.
 
-## Структура проекта
-
-'''
-PHP
-├─ library-app
-│  ├─ apache_config.conf
-│  ├─ composer.json
-│  ├─ composer.lock
-│  ├─ config
-│  │  └─ database.php
-│  ├─ docker-compose.yml
-│  ├─ Dockerfile
-│  ├─ initialize_db.php
-│  ├─ public
-│  │  ├─ .htaccess
-│  │  └─ index.php
-│  ├─ src
-│  │  ├─ Contracts
-│  │  ├─ Controller
-│  │  ├─ Exception
-│  │  ├─ Helper
-│  │  ├─ Http
-│  │  ├─ Model
-│  │  ├─ Repository
-│  │  ├─ Router
-│  │  └─ Service
-│  └─ vendor
-└─ README.md
-'''
-
 ## Ключевые файлы и директории
 
 - `apache_config.conf`: Конфигурация Apache сервера.
