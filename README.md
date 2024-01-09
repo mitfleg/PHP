@@ -24,6 +24,31 @@ Library-App - это PHP-приложение для управления биб
   - `Router`: Маршрутизация запросов.
   - `Service`: Сервисы для бизнес-логики.
 - `vendor`: Зависимости, установленные через Composer.
+- 
+
+## Маршруты
+
+В приложении определены следующие маршруты:
+
+1. `GET /books`
+   - Описание: Возвращает список всех книг.
+   - Контроллер: `Controller\BookController::getAllBooks`
+
+2. `POST /books/add`
+   - Описание: Добавляет новую книгу.
+   - Контроллер: `Controller\BookController::addBook`
+
+3. `POST /books/{book_id:\d}/lend`
+   - Описание: Выдает книгу читателю. `{book_id}` - идентификатор книги.
+   - Контроллер: `Controller\BookController::takeBook`
+
+4. `PUT /books/{book_id:\d}/write_off_book`
+   - Описание: Списывает книгу из библиотеки. `{book_id}` - идентификатор книги.
+   - Контроллер: `Controller\BookController::writeOffBook`
+
+5. `POST /reader/add`
+   - Описание: Добавляет нового читателя.
+   - Контроллер: `Controller\ReaderController::addReader`
 
 ## Установка и запуск
 
