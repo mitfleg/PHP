@@ -1,6 +1,12 @@
-# PHP
+# Библиотека Library-App
 
-```
+## Описание
+
+Library-App - это PHP-приложение для управления библиотекой. Включает в себя функционал для работы с книгами, авторами, читателями и процессом выдачи книг.
+
+## Структура проекта
+
+'''
 PHP
 ├─ library-app
 │  ├─ apache_config.conf
@@ -16,61 +22,43 @@ PHP
 │  │  └─ index.php
 │  ├─ src
 │  │  ├─ Contracts
-│  │  │  ├─ BaseContract.php
-│  │  │  ├─ BookContract.php
-│  │  │  ├─ ReaderContract.php
-│  │  │  ├─ TakeBookContract.php
-│  │  │  └─ WriteOffBookContract.php
 │  │  ├─ Controller
-│  │  │  ├─ BaseController.php
-│  │  │  ├─ BookController.php
-│  │  │  └─ ReaderController.php
 │  │  ├─ Exception
-│  │  │  ├─ BaseException.php
-│  │  │  ├─ ContractException.php
-│  │  │  ├─ DatabaseException.php
-│  │  │  ├─ ModelException.php
-│  │  │  └─ RepositoryException.php
 │  │  ├─ Helper
-│  │  │  └─ DatabaseConnection.php
 │  │  ├─ Http
-│  │  │  ├─ Request.php
-│  │  │  └─ Response.php
 │  │  ├─ Model
-│  │  │  ├─ Author.php
-│  │  │  ├─ BaseModel.php
-│  │  │  ├─ Book.php
-│  │  │  ├─ BookAuthor.php
-│  │  │  ├─ Loan.php
-│  │  │  └─ Reader.php
 │  │  ├─ Repository
-│  │  │  ├─ AuthorRepository.php
-│  │  │  ├─ BaseRepository.php
-│  │  │  ├─ BookRepository.php
-│  │  │  ├─ LoanRepository.php
-│  │  │  └─ ReaderRepository.php
 │  │  ├─ Router
-│  │  │  ├─ include_routers.php
-│  │  │  ├─ Router.php
-│  │  │  └─ RouterInterface.php
 │  │  └─ Service
-│  │     ├─ AuthorService.php
-│  │     ├─ BookService.php
-│  │     ├─ LoanService.php
-│  │     └─ ReaderService.php
 │  └─ vendor
-│     ├─ autoload.php
-│     └─ composer
-│        ├─ autoload_classmap.php
-│        ├─ autoload_namespaces.php
-│        ├─ autoload_psr4.php
-│        ├─ autoload_real.php
-│        ├─ autoload_static.php
-│        ├─ ClassLoader.php
-│        ├─ installed.json
-│        ├─ installed.php
-│        ├─ InstalledVersions.php
-│        └─ LICENSE
 └─ README.md
+'''
 
-```
+## Ключевые файлы и директории
+
+- `apache_config.conf`: Конфигурация Apache сервера.
+- `composer.json` и `composer.lock`: Конфигурация Composer для управления зависимостями PHP.
+- `config/database.php`: Конфигурация подключения к базе данных.
+- `docker-compose.yml` и `Dockerfile`: Настройки Docker для создания контейнеризованной среды.
+- `initialize_db.php`: Скрипт для инициализации базы данных.
+- `public`: Публичная директория, доступная для пользователей.
+  - `.htaccess` и `index.php`: Настройки Apache и точка входа в приложение.
+- `src`: Исходный код приложения.
+  - `Contracts`: Определения интерфейсов для компонентов.
+  - `Controller`: Контроллеры для обработки запросов.
+  - `Exception`: Определения исключений.
+  - `Helper`: Вспомогательные классы, например, для подключения к базе данных.
+  - `Http`: Компоненты для работы с HTTP-запросами и ответами.
+  - `Model`: Модели данных.
+  - `Repository`: Репозитории для работы с базой данных.
+  - `Router`: Маршрутизация запросов.
+  - `Service`: Сервисы для бизнес-логики.
+- `vendor`: Зависимости, установленные через Composer.
+
+## Установка и запуск
+
+1. Клонируйте репозиторий.
+2. Установите зависимости через Composer.
+3. Настройте `config/database.php` с вашими параметрами БД.
+4. Запустите `initialize_db.php` для инициализации БД.
+5. Используйте `docker-compose` для запуска контейнера с приложением.
